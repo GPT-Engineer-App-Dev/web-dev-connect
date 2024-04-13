@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Box, Heading, Text, Button, Stack, Container, SimpleGrid, Image } from "@chakra-ui/react";
 import { FaCheckCircle } from "react-icons/fa";
 
@@ -14,7 +15,7 @@ const Index = () => {
           <Text fontSize="xl" mb={8}>
             Particles is your go-to marketplace for discovering skilled web developers specializing in the latest technologies.
           </Text>
-          <Button colorScheme="blue" size="lg" rightIcon={<FaCheckCircle />} onClick={() => alert("View developers")}>
+          <Button colorScheme="blue" size="lg" rightIcon={<FaCheckCircle />} as={Link} to="/developers">
             View Available Developers
           </Button>
         </Container>
@@ -61,7 +62,7 @@ const Index = () => {
           <Text fontSize="xl" mb={8}>
             Browse our talented pool of developers and take your projects to the next level.
           </Text>
-          <Button colorScheme="white" size="lg" variant="outline" onClick={() => alert("View developers")}>
+          <Button colorScheme="white" size="lg" variant="outline" as={Link} to="/developers">
             View Available Developers
           </Button>
         </Container>
